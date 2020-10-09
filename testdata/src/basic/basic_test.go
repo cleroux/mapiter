@@ -10,7 +10,7 @@ func TestBasic(t *testing.T) {
 
 	_, _ = basic(m)
 
-	// Iterating over a map is ignored in tests by default.
+	// Iterating over a map analysis is included in tests by default.
 	for k, v := range m { // want `iterating over a map`
 		_ = k
 		_ = v
