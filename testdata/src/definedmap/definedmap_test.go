@@ -4,7 +4,7 @@ import "testing"
 
 func TestBasic(t *testing.T) {
 
-	m := make(map[string]bool)
+	m := make(mapStringBool)
 	m["a"] = true
 	m["b"] = true
 

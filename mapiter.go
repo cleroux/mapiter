@@ -38,7 +38,7 @@ func run(pass *analysis.Pass) (interface{}, error) {
 			if r, ok := n.(*ast.RangeStmt); ok {
 
 				// Check if range value is a map
-				if _, ok := pass.TypesInfo.TypeOf(r.X).(*types.Map); ok {
+				if _, ok := pass.TypesInfo.TypeOf(r.X).Underlying().(*types.Map); ok {
 					pass.Reportf(r.TokPos, "iterating over a map")
 					return false
 				}
